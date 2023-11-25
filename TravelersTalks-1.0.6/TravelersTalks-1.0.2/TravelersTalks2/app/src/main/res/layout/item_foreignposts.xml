@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@color/TT_Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/Container"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/userpic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="35dp"
+            android:textSize="20sp"
+            tools:text="NickName"
+            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="33dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
+            tools:text="30/09/2023"/>
+
+        <ImageView
+            android:id="@+id/ivBlankHeart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="273dp"
+            android:layout_marginTop="50dp"
+
+            app:layout_constraintStart_toEndOf="@id/tvUserName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/blankheart" />
+        <ImageView
+            android:id="@+id/ivFlag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@id/tvDate"
+            app:layout_constraintTop_toBottomOf="@id/ivBlankHeart"
+            tools:src="@drawable/ic_flag_mx" />
+
+        <TextView
+            android:id="@+id/tvTituloPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Title of the post"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePicture"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloPost"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="4.6"/>
+        <ImageView
+            android:id="@+id/ivStars"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloPost"
+            app:layout_constraintStart_toEndOf="@id/tvRating"
+            tools:src="@drawable/ic_star"
+            android:layout_marginLeft="5dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/ivStars"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/TT_Gris">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ivPicturePost"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:accessibilityHeading="false"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            tools:src="@drawable/purecomedy"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/ivStars"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtVerMas"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ivPicturePost"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"
+            android:text="Ver más..."
+            android:textStyle="bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

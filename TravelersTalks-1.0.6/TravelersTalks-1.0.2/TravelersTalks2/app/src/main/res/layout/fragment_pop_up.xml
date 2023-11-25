@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".popUpFragment"
+    android:background="@color/TT_Barra">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtFiltersTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Filters"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/Linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtFiltersTitle"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:hint="Search..."
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white">
+        </EditText>
+        <ImageView
+            android:id="@+id/imgLupa"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginTop="15px"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/selectCountry"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/TT_Post"
+            android:hint="Country"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvdropwon_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Linear1"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnFechaInicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initial Date"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/TT_Action">
+        </Button>
+
+        <Button
+            android:id="@+id/btnFechaFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Final Date"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="40dp"
+            android:backgroundTint="@color/TT_Action">
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Linear2"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtInitialDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initial Date"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/Linear3"
+            tools:ignore="MissingConstraints">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtFinalDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initial Date"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/Linear3"
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="90dp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Linear3"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtMinimumRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minimum Rating"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/Linear3"
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="90dp">
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/rlRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="@color/TT_Action"
+                android:layout_marginStart="30dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Linear4"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/TT_Action"
+            android:text="Apply"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp">
+        </Button>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/TT_Post"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_marginStart="90dp"
+            app:cornerRadius="10dp">
+        </Button>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

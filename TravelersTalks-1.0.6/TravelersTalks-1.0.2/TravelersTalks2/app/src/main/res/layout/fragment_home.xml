@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="450dp"
+        android:layout_height="40dp"
+        android:background="@color/TT_Barra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/busquedaTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Search..."
+            android:textSize="40px"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            >
+        </EditText>
+        <ImageView
+            android:id="@+id/busqIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginTop="15px"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            android:scaleX="3"
+            android:scaleY="1.2"
+            android:src="@drawable/ic_rule"
+            android:layout_marginLeft="2dp"/>
+
+        <TextView
+            android:id="@+id/txtFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters"
+            android:textColor="@color/white"
+            android:textSize="50px">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4px"
+            android:layout_marginTop="20px"
+            android:rotation="90"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/ic_arrow" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayoutFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/TT_Barra">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtros"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/selectCountry"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="@color/TT_Post"
+                android:hint="Country"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvdropwon_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:id="@+id/rlRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RatingBar
+                    android:id="@+id/ratBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:progressBackgroundTint="@color/white"
+                    android:progressTint="@color/TT_Action"
+                    android:layout_marginStart="0dp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivEliminarRating"
+                android:layout_width="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="20dp"
+                android:src="@drawable/borrartachita"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearFechas"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/selectFecha"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/TT_Post"
+
+                android:hint="Orden Fecha">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvdropwon_fieldFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutFiltros">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPosts"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayout1"></androidx.recyclerview.widget.RecyclerView>
+    </FrameLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/linearLayoutMenu2"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@color/TT_Barra"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtSiguiendo"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Siguiendo"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/bttnCreatePub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:backgroundTint="@color/TT_Action"
+        app:cornerRadius="100dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toEndOf="@id/txtSiguiendo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/txtParati"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/TT_Action"
+        android:text="Para ti"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/bttnCreatePub"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarPosts"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutMenu2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/TT_Action"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

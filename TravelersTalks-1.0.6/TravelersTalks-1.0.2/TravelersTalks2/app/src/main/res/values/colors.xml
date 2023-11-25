@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="TT_Fondo">#17244E</color>
+    <color name="TT_Action">#FE057C</color>
+    <color name="TT_Input">#6D72EE</color>
+    <color name="TT_Post">#D3D4D4</color>
+    <color name="TT_Contraste">#212D3B</color>
+    <color name="TT_Barra">#173BB4</color>
+    <color name="TT_Gris">#8D8D97</color>
+</resources>

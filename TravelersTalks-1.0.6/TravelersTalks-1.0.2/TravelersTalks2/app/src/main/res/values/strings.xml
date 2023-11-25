@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Travelers-Talks</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="titulo_Login">Welcome Back !</string>
+    <string name="titulo_Login_Email">Enter your email :</string>
+    <string name="titulo_Login_Email_Edit">Email</string>
+    <string name="titulo_Login_Password">Enter your password :</string>
+    <string name="titulo_Login_Password_Edit">Password</string>
+    <string name="btnLoginText">Sign In</string>
+    <string name="linkRegistro">You are new ? Sign Up</string>
+    <string name="titulo_Registro">Join Us !</string>
+    <string name="titulo_Registro_Name">Enter your name :</string>
+    <string name="titulo_Registro_Name_Edit">Name</string>
+    <string name="titulo_Registro_LastName">Enter your last name :</string>
+    <string name="titulo_Registro_LastName_Edit">Last Name</string>
+    <string name="titulo_Registro_Email">Enter your email :</string>
+    <string name="titulo_Registro_Email_Edit">Email</string>
+    <string name="titulo_Registro_Password">Enter your password :</string>
+    <string name="titulo_Registro_Password_Edit">Password</string>
+    <string name="titulo_Registro_NickName">Enter your Nickname :</string>
+    <string name="titulo_Registro_NickName_Edit">Nickname</string>
+    <string name="btnRegistroText">Sign Up</string>
+    <string name="linkLogin">You have an account ? Sign In</string>
+    <string name="btnBrowse">Browse</string>
+    <string name="stringdummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus a ante ullamcorper tincidunt. Vivamus vel erat vel libero facilisis euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed et nisi at mi pharetra tincidunt. Vestibulum sed neque id metus elementum consequat. Sed volutpat mi ac libero eleifend, et vestibulum purus dignissim. </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
